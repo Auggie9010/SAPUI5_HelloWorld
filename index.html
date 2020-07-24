@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta charset="UTF-8">
+        <title>Hello World App</title>
+        <!--以下を追加-->
+        <script
+           id="sap-ui-bootstrap"
+           src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+           data-sap-ui-theme="sap_belize"
+           data-sap-ui-libs="sap.m"
+           data-sap-ui-compatVersion="edge"
+           data-sap-ui-preload="async" 
+           //省略
+           data-sap-ui-resourceroots='{
+            "test.helloworld": "./"
+           }'
+           >
+        </script>
+        <script>
+           sap.ui.getCore().attachInit(function () {
+              sap.ui.xmlview({
+                 viewName : "test.helloworld.view.App"
+              }).placeAt("content");
+           });
+        </script>
+        <!--以上を追加-->
+    </head>
+    <body class="sapUiBody" id="content">
+    </body>
+</html>
