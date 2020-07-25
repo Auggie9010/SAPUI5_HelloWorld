@@ -1,8 +1,10 @@
-<mvc:View
-   controllerName="test.helloworld.controller.App"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <Button
-      text="Say Hello"
-      press="onShowHello"/>
+<mvc:View 
+    controllerName="test.helloworld.controller.App" 
+    xmlns="sap.m" xmlns:l="sap.ui.layout" 
+    xmlns:mvc="sap.ui.core.mvc">
+    <l:VerticalLayout class="sapUiContentPadding">
+        <Button text="{i18n>helloButton}" press="onShowHello"/>
+        <Text text="{mPrice>/product/name}"/>
+        <Text text="{mPrice>/product/price}"/>
+    </l:VerticalLayout>
 </mvc:View>

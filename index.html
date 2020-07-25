@@ -20,12 +20,15 @@
         </script>
         <script>
            sap.ui.getCore().attachInit(function () {
+            /* コメントアウト
               sap.ui.xmlview({
                  viewName : "test.helloworld.view.App"
+            */
+                new sap.ui.core.ComponentContainer({
+                    name : "test.helloworld"
               }).placeAt("content");
            });
         </script>
-        <!--以上を追加-->
     </head>
     <body class="sapUiBody" id="content">
     </body>
